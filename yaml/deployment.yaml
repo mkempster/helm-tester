@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ui
+  labels:
+    app: ui
+spec:
+  selector:
+    matchLabels:
+      app: ui
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      containers:
+        - name: ui
+          image: mkempster/app:1.0.0
+          ports:
+            - containerPort: 80
+
