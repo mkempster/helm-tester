@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: "ui.minikube.local"
+  - host: {{ printf "ui.%s.minikube.local" .Release.Name | trunc 63 | trimSuffix "-" }}
     http:
       paths:
       - path: /
