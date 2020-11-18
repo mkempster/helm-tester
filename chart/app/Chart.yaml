@@ -1,7 +1,7 @@
 apiVersion: v2
-name: app
-description: Test ui app
+name: alexandria
+description: Test app: Alexandria
 appVersion: "1.0.3"
-version: 0.1.1
+version: 0.2.0
 type: application
 

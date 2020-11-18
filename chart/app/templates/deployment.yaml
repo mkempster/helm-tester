@@ -1,24 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-ui
+  name: alexandria-ui
   labels:
-    app: ui
+    app: alexandria
+    role: ui
 spec:
   selector:
     matchLabels:
-      app: ui
+      app: alexandria
+      role: ui
   replicas: 3
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        app: ui
+        app: alexandria
+        role: ui
     spec:
       containers:
-        - name: ui
-          image: mkempster/app:1.0.3
+        - name: alexandria-ui
+          image: mkempster/alexandria-ui:1.0.3
           ports:
             - containerPort: 80
 
