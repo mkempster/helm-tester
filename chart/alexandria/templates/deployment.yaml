@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: alexandria-ui
-          image: mkempster/alexandria-ui:1.0.3
+          image: mkempster/alexandria-ui:1.0.4
           ports:
             - containerPort: 80
 
